@@ -16,6 +16,7 @@ LightCafe 社区（bbs.liht.cc）的 Android 客户端，基于 [Flarent](https:
 - ☕ 咖啡厅定制主题
 - 📎 文件上传
 - 🔗 社交频道入口（QQ群 / TG / Discord）
+- AI聊天功能
 
 ## 下载
 
