@@ -1,5 +1,7 @@
 package com.bettafish.flarent.network
 
+import com.bettafish.flarent.models.AiChatRequest
+import com.bettafish.flarent.models.AiChatResponse
 import com.bettafish.flarent.models.Discussion
 import com.bettafish.flarent.models.File
 import com.bettafish.flarent.models.Forum
@@ -186,4 +188,10 @@ interface FlarumService {
     suspend fun sendMessage(
         @Body message: Message
     ): Message
+
+    // AI 聊天
+    @POST("api/ai-proxy/chat")
+    suspend fun aiChat(
+        @Body body: AiChatRequest,
+    ): AiChatResponse
 }

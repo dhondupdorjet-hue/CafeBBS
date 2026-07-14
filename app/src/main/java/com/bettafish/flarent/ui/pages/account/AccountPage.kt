@@ -16,6 +16,7 @@ import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.SmartToy
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarOutline
 import androidx.compose.material.icons.twotone.History
@@ -46,6 +47,7 @@ import com.bettafish.flarent.utils.appSettings
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootGraph
 import com.ramcosta.composedestinations.generated.destinations.AboutPageDestination
+import com.ramcosta.composedestinations.generated.destinations.AiChatPageDestination
 import com.ramcosta.composedestinations.generated.destinations.DiscussionListPageDestination
 import com.ramcosta.composedestinations.generated.destinations.LoginPageDestination
 import com.ramcosta.composedestinations.generated.destinations.SettingsPageDestination
@@ -119,6 +121,12 @@ fun AccountPage(
             )
         }
 
+        TextSetting(
+            title = "AI 助手",
+            minimalHeight = true,
+            leadingIcon = { Icon(Icons.Default.SmartToy, contentDescription = null) },
+            onClick = { navigator.navigate(AiChatPageDestination) }
+        )
         TextSetting(
             title = stringResource(R.string.settings),
             minimalHeight = true,

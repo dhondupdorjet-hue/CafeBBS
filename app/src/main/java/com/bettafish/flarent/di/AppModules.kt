@@ -3,6 +3,8 @@ package com.bettafish.flarent.di
 import com.bettafish.flarent.App
 import com.bettafish.flarent.BuildConfig
 import com.bettafish.flarent.config.ForumConfig
+import com.bettafish.flarent.data.AiRepository
+import com.bettafish.flarent.data.AiRepositoryImpl
 import com.bettafish.flarent.data.DiscussionsRepository
 import com.bettafish.flarent.data.DiscussionsRepositoryImpl
 import com.bettafish.flarent.data.FileRepository
@@ -39,6 +41,7 @@ import com.bettafish.flarent.network.FlarumService
 import com.bettafish.flarent.ui.pages.account.AccountViewModel
 import com.bettafish.flarent.ui.pages.account.EditProfileViewModel
 import com.bettafish.flarent.ui.pages.account.login.LoginViewModel
+import com.bettafish.flarent.ui.pages.aiChat.AiChatViewModel
 import com.bettafish.flarent.ui.pages.detail.DiscussionDetailViewModel
 import com.bettafish.flarent.ui.pages.discussionList.DiscussionListViewModel
 import com.bettafish.flarent.ui.pages.discussionList.NewDiscussionViewModel
@@ -153,6 +156,7 @@ val repositoryModule = module {
     single<FileRepository> { FileRepositoryImpl(get(), context = androidContext()) }
     single<PollsRepository> { PollsRepositoryImpl(get()) }
     single<MessagesRepository> { MessagesRepositoryImpl(get()) }
+    single<AiRepository> { AiRepositoryImpl(get()) }
 }
 
 val viewModelModule = module {
@@ -202,6 +206,7 @@ val viewModelModule = module {
     }
     viewModel { MessagesViewModel(get()) }
     viewModel { ConversationViewModel(get()) }
+    viewModel { AiChatViewModel(get()) }
 }
 
 class AuthInterceptor : Interceptor {
