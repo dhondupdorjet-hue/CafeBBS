@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Cafe论坛</string>
-    <string name="flarum_base_url" translatable="false">https://bbs.liht.cc/</string>
+    <string name="app_name" translatable="false">Forum Edharmalib</string>
+   <string name="flarum_base_url">https://forum.edharmalib.com/</string>
     <string name="check_update_url" translatable="false">https://bbs.liht.cc/</string>
     <string name="user_agreement_url" translatable="false">https://bbs.liht.cc/</string>
     <string name="privacy_policy_url" translatable="false">https://bbs.liht.cc/</string>
